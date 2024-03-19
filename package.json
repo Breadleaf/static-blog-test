@@ -7,7 +7,7 @@
     "preprocess:posts": "node preprocess.js",
     "preprocess:style": "npx tailwindcss -i ./tailwind.css -o ./style.css --minify",
     "preprocess:style:prod": "NODE_ENV=production npm run preprocess:style",
-    "build": "npm run preprocess:posts && npM run preprocess:style",
+    "build": "npm run preprocess:posts && npm run preprocess:style",
     "build:prod": "npm run build && npm run preprocess:style:prod"
   },
   "keywords": [],
