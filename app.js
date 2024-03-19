@@ -27,10 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
 				postDate.textContent = date;
 				postContentDiv.innerHTML = postContent;
 
+				postTags.id = 'tags';
+
 				post.appendChild(postTitle);
 				post.appendChild(postTags);
 				post.appendChild(postDate);
 				post.appendChild(postContentDiv);
+
+				post.id = title;
+
 
 				contentContainer.appendChild(post);
 			});

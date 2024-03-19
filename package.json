@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "preprocess": "node preprocess.js"
+    "preprocess": "node preprocess.js",
+    "build": "npm run preprocess"
   },
   "keywords": [],
   "author": "",
