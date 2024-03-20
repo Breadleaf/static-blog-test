@@ -16,26 +16,61 @@ class Logo extends HTMLElement {
 			"flex",
 			"items-center",
 			"mx-auto",
+			"p-2",
 		);
 
-		const img = document.createElement("img");
-		img.src = "/assets/logo.png";
-		img.alt = "logo";
-		img.classList.add(
-			"transform",
-			"-rotate-45",
+		const icon_wrapper = document.createElement("div");
+		icon_wrapper.classList.add(
+			"rotate-[340deg]",
+			"p-2",
+		);
+
+		const bread = document.createElement("i");
+		bread.classList.add(
+			"fa-solid",
+			"fa-bread-slice",
+		);
+		bread.style.color = "#5e5c64";
+
+		icon_wrapper.appendChild(bread);
+
+		const leaf = document.createElement("i");
+		leaf.classList.add(
+			"fa-solid",
+			"fa-leaf",
+		);
+		leaf.style.color = "#5e5c64";
+
+		icon_wrapper.appendChild(leaf);
+
+		a.appendChild(icon_wrapper);
+
+		const nameWrapper = document.createElement("div");
+		nameWrapper.classList.add(
+			"flex",
+			"flex-col",
+			"sm:flex-row",
+		);
+
+		const firstNameSpan = document.createElement("span");
+		firstNameSpan.textContent = "Bradley";
+		firstNameSpan.classList.add(
 			"flex-shrink-0",
+			"p-1",
 		);
 
-		a.appendChild(img);
+		nameWrapper.appendChild(firstNameSpan);
 
-		const textSpan = document.createElement("span");
-		textSpan.textContent = "Text Text";
-		textSpan.classList.add(
+		const lastNameSpan = document.createElement("span");
+		lastNameSpan.textContent = "Hutchings";
+		lastNameSpan.classList.add(
 			"flex-shrink-0",
+			"p-1",
 		);
 
-		a.appendChild(textSpan);
+		nameWrapper.appendChild(lastNameSpan);
+
+		a.appendChild(nameWrapper);
 
 		this.appendChild(a);
 	}
